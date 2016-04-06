@@ -24,7 +24,7 @@
     <modules>
         <module>services</module>
         <module>features</module>
-        <module>offline-repo</module>
+        <!--<module>offline-repo</module>-->
     </modules>
 
     <dependencyManagement>
