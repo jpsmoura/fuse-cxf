@@ -16,7 +16,7 @@
                         address="/camel-example-cxf-blueprint/webservices/ticket"
                         endpointName="s:CreateTicketEndpoint"
                         serviceName="s:CreateTicketEndpointService"
-                        wsdlURL="com/bp/ticket/wsdl/create_ticket.wsdl"
+
                         serviceClass="org.apache.camel.example.createticket.CreateTicketEndpoint"
                         xmlns:s="http://createticket.example.camel.apache.org"/>
 

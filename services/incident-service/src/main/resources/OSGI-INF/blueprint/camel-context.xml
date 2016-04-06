@@ -16,14 +16,14 @@
                         address="/camel-example-cxf-blueprint/webservices/incident"
                         endpointName="s:ReportIncidentEndpoint"
                         serviceName="s:ReportIncidentEndpointService"
-                        wsdlURL="com/bp/incident/wsdl/report_incident.wsdl"
+
                         serviceClass="org.apache.camel.example.reportincident.ReportIncidentEndpoint"
                         xmlns:s="http://reportincident.example.camel.apache.org"/>
 
     <camelcxf:cxfEndpoint id="createTicket"
                           serviceClass="org.apache.camel.example.createticket.CreateTicketEndpoint"
                           address="http://localhost:8181/cxf/camel-example-cxf-blueprint/webservices/ticket"
-                          wsdlURL="com/bp/ticket/wsdl/create_ticket.wsdl">
+                           >
         <camelcxf:properties>
             <entry key="dataFormat" value="POJO" />
             <entry key="loggingFeatureEnabled" value="true" />
@@ -36,9 +36,9 @@
 
   <camelContext managementNamePattern="#symbolicName#-#counter#" id="incident-flow" xmlns="http://camel.apache.org/schema/blueprint">
        <route>
-            <from uri="cxf:bean:reportIncident"/>
+           <from uri="cxf:bean:reportIncident"/>
 
-            <convertBodyTo type="org.apache.camel.example.reportincident.InputReportIncident"/>
+           <convertBodyTo type="org.apache.camel.example.reportincident.InputReportIncident"/>
 
            <to uri="bean:preProcessor"/>
 
